@@ -57,9 +57,7 @@ export default function LandingPage() {
             <Link href="/login" className="hidden sm:block text-sm font-medium hover:text-primary transition-colors">
               Iniciar Sesión
             </Link>
-            <Button className="rounded-xl px-6 shadow-lg shadow-primary/20" asChild>
-              <Link href="/register">Registrarse</Link>
-            </Button>
+            <Link href="/register">Registrarse</Link>
           </div>
         </div>
       </nav>
@@ -79,9 +77,7 @@ export default function LandingPage() {
               Radar Vecinal es la plataforma de inteligencia territorial que conecta a vecinos, autoridades y servicios para un distrito más seguro y eficiente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-              <Button size="lg" className="rounded-2xl px-8 text-lg font-bold shadow-2xl shadow-primary/30 h-14" asChild>
-                <Link href="/register">Empezar Ahora <ChevronRight className="ml-2 h-5 w-5" /></Link>
-              </Button>
+              <Link href="/register">Empezar Ahora <ChevronRight className="ml-2 h-5 w-5" /></Link>
               <Button size="lg" variant="outline" className="rounded-2xl px-8 text-lg font-bold h-14 bg-secondary/20">
                 <PlayCircle className="mr-2 h-5 w-5" /> Ver Demo
               </Button>
@@ -214,12 +210,8 @@ export default function LandingPage() {
               Únete a miles de vecinos que ya están protegiendo su comunidad. Es gratis y te toma menos de un minuto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" className="rounded-2xl px-12 h-16 text-lg font-bold shadow-2xl shadow-primary/30" asChild>
-                <Link href="/register">Crear Mi Cuenta</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-2xl px-12 h-16 text-lg font-bold bg-background/50 backdrop-blur" asChild>
-                <Link href="/login">Acceder</Link>
-              </Button>
+              <Link href="/register">Crear Mi Cuenta</Link>
+              <Link href="/login">Acceder</Link>
             </div>
           </div>
         </div>
