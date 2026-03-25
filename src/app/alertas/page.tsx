@@ -92,9 +92,7 @@ export default function AlertasPage() {
                 Tu reporte puede salvar vidas. No dudes en informar sobre cualquier incidente o emergencia.
               </p>
             </div>
-            <Button size="lg" className="rounded-2xl h-14 px-12 font-bold text-lg shadow-2xl shadow-primary/30" asChild>
-              <a href="/reportar">Crear Reporte Ahora</a>
-            </Button>
+            <a href="/reportar">Crear Reporte Ahora</a>
           </CardContent>
         </Card>
       </div>
