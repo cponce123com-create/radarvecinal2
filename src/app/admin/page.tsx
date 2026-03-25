@@ -52,7 +52,7 @@ export default function AdminDashboard() {
               <Download className="mr-2 h-4 w-4" /> Exportar Datos
             </Button>
             <Button className="rounded-xl shadow-lg shadow-primary/20">
-              <PlusSquare className="mr-2 h-4 w-4" /> Nuevo Anuncio
+              <SquarePlus className="mr-2 h-4 w-4" /> Nuevo Anuncio
             </Button>
           </div>
         </div>
