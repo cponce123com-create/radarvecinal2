@@ -62,11 +62,9 @@ export default function PreviewShowcase() {
               <Monitor className="h-4 w-4 mr-2" /> Desktop
             </Button>
           </div>
-          <Button variant="outline" size="sm" className="rounded-xl h-10 border-border/40" asChild>
-            <a href={currentComponent?.path} target="_blank" rel="noopener noreferrer">
+          <a href={currentComponent?.path} target="_blank" rel="noopener noreferrer">
               Abrir en nueva pestaña <ExternalLink className="ml-2 h-4 w-4" />
             </a>
-          </Button>
         </div>
       </header>
 
