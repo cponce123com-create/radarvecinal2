@@ -73,37 +73,6 @@ export default function AdminDashboard() {
                   )}>
                     {stat.trend.startsWith("+") ? <TrendingUp className="mr-1 h-3 w-3" /> : stat.trend === "0%" ? null : <TrendingDown className="mr-1 h-3 w-3" />}
                     {stat.trend}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground font-medium uppercase tracking-widest">{stat.label}</p>
-                  <h3 className="text-3xl font-bold mt-1">{stat.value}</h3>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Recent Reports Table */}
-          <Card className="lg:col-span-2 border-none bg-card/50 shadow-xl rounded-3xl overflow-hidden">
-            <CardHeader className="p-8 pb-4 flex flex-row items-center justify-between">
-              <div>
-                <CardTitle className="text-xl font-bold">Reportes Recientes</CardTitle>
-                <CardDescription>Gestión de las últimas incidencias recibidas.</CardDescription>
-              </div>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <Filter className="h-5 w-5" />
-              </Button>
-            </CardHeader>
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader className="bg-secondary/20">
-                  <TableRow className="border-border/40">
-                    <TableHead className="px-8 py-4 font-bold text-xs uppercase tracking-widest">Reporte</TableHead>
-                    <TableHead className="font-bold text-xs uppercase tracking-widest">Categoría</TableHead>
-                    <TableHead className="font-bold text-xs uppercase tracking-widest">Urgencia</TableHead>
-                    <TableHead className="font-bold text-xs uppercase tracking-widest">Estado</TableHead>
                     <TableHead className="px-8 py-4 text-right font-bold text-xs uppercase tracking-widest">Acciones</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -143,8 +112,8 @@ export default function AdminDashboard() {
                       </TableCell>
                       <TableCell className="px-8 py-4 text-right">
                         <DropdownMenu>
-                          <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon" className="rounded-full">
+                          <DropdownMenuTrigger>
+                            <Button variant="ghost" size="icon" className="rounded-full" onClick={(e) => e.stopPropagation()}>
                               <MoreVertical className="h-4 w-4" />
                             </Button>
                           </DropdownMenuTrigger>
