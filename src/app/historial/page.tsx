@@ -139,7 +139,7 @@ export default function HistoryPage() {
                       <span className="font-bold">{item.user}</span>
                     </div>
                     <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
+                      <DropdownMenuTrigger>
                         <Button variant="ghost" size="icon" className="rounded-full h-10 w-10">
                           <MoreHorizontal className="h-5 w-5" />
                         </Button>
