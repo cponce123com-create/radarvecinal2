@@ -7,6 +7,7 @@ import {
   AlertTriangle, Filter, Download, MoreVertical,
   BarChart, Map as MapIcon, Settings, SquarePlus
 } from "lucide-react"
+import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
