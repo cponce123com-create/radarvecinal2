@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import Map, { Marker, NavigationControl, GeolocateControl, Popup } from "react-map-gl"
-import "mapbox-gl/dist/mapbox-gl.css"
 import { ShieldAlert, AlertTriangle, Siren, Flame, Search, Plus, MapPin, Trash2, Droplets, UserMinus, MessageSquare } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -46,18 +44,37 @@ export function MapView() {
   })
   const [selectedReport, setSelectedReport] = useState<any>(null)
   const [mounted, setMounted] = useState(false)
+  const [MapComponents, setMapComponents] = useState<any>(null)
 
   useEffect(() => {
     setMounted(true)
+    import("react-map-gl").then((mod) => {
+      setMapComponents({
+        Map: mod.default,
+        Marker: mod.Marker,
+        NavigationControl: mod.NavigationControl,
+        GeolocateControl: mod.GeolocateControl,
+        Popup: mod.Popup,
+      })
+    })
+    import("mapbox-gl/dist/mapbox-gl.css" as any)
   }, [])
 
-  if (!mounted) return null
+  if (!mounted || !MapComponents) {
+    return (
+      <div className="relative h-full w-full overflow-hidden rounded-2xl border shadow-inner flex items-center justify-center bg-muted">
+        <p className="text-muted-foreground text-sm">Cargando mapa...</p>
+      </div>
+    )
+  }
+
+  const { Map, Marker, NavigationControl, GeolocateControl, Popup } = MapComponents
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-2xl border shadow-inner">
       <Map
         {...viewState}
-        onMove={(evt) => setViewState(evt.viewState)}
+        onMove={(evt: any) => setViewState(evt.viewState)}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/dark-v11"
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
@@ -73,7 +90,7 @@ export function MapView() {
               latitude={report.latitude}
               longitude={report.longitude}
               anchor="bottom"
-              onClick={(e) => {
+              onClick={(e: any) => {
                 e.originalEvent.stopPropagation()
                 setSelectedReport(report)
               }}
