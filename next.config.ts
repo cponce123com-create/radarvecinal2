@@ -8,9 +8,13 @@ const withPWA = require("next-pwa")({
 });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {},
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com", "i.pravatar.cc"],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "res.cloudinary.com" },
+      { protocol: "https", hostname: "i.pravatar.cc" },
+    ],
   },
 };
 
