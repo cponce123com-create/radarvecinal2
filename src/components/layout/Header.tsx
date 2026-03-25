@@ -43,15 +43,13 @@ export function Header() {
           </Button>
 
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="relative h-9 w-9 rounded-full p-0">
+            <DropdownMenuTrigger className="relative h-9 w-9 rounded-full p-0 inline-flex items-center justify-center">
                 <Avatar className="h-9 w-9 border-2 border-primary/20">
                   <AvatarImage src="/avatars/user.png" alt="Usuario" />
                   <AvatarFallback className="bg-secondary">JD</AvatarFallback>
                 </Avatar>
-              </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56" align="end" forceMount>
+            <DropdownMenuContent className="w-56" align="end">
               <DropdownMenuLabel className="font-normal">
                 <div className="flex flex-col space-y-1">
                   <p className="text-sm font-medium leading-none">Juan Diego</p>
@@ -61,12 +59,8 @@ export function Header() {
                 </div>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <Link href="/perfil">Mi Perfil</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/admin">Panel Admin</Link>
-              </DropdownMenuItem>
+              <DropdownMenuItem><Link href="/perfil" className="w-full">Mi Perfil</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/admin" className="w-full">Panel Admin</Link></DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="text-destructive focus:text-destructive">
                 Cerrar Sesión

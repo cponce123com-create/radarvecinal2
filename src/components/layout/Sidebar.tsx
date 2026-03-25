@@ -54,16 +54,10 @@ export function Sidebar({ className }: { className?: string }) {
         </nav>
 
         <div className="flex flex-col gap-2 pt-4">
-          <Button
-            variant="ghost"
-            className="justify-start gap-3 rounded-xl text-muted-foreground hover:bg-secondary hover:text-foreground"
-            asChild
-          >
-            <Link href="/perfil">
+          <Link href="/perfil" className="inline-flex items-center justify-start gap-3 rounded-xl px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors">
               <Settings className="h-5 w-5" />
               <span>Configuración</span>
-            </Link>
-          </Button>
+          </Link>
           <Button
             variant="ghost"
             className="justify-start gap-3 rounded-xl text-destructive hover:bg-destructive/10 hover:text-destructive"
