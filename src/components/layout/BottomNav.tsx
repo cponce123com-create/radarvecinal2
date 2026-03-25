@@ -2,14 +2,14 @@
 
 import React from "react"
 import Link from "next/link"
-import { Home, Map, PlusSquare, History, BarChart3 } from "lucide-react"
+import { Home, Map, SquarePlus, History, BarChart3 } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 const NAV_ITEMS = [
   { label: "Home", icon: Home, href: "/home" },
   { label: "Mapa", icon: Map, href: "/mapa" },
-  { label: "Reportar", icon: PlusSquare, href: "/reportar" },
+  { label: "Reportar", icon: SquarePlus, href: "/reportar" },
   { label: "Historial", icon: History, href: "/historial" },
   { label: "Estadísticas", icon: BarChart3, href: "/estadisticas" },
 ]
