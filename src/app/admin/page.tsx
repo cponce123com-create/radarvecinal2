@@ -5,7 +5,7 @@ import {
   Users, ShieldAlert, FileText, Megaphone, 
   TrendingUp, TrendingDown, Clock, CheckCircle2, 
   AlertTriangle, Filter, Download, MoreVertical,
-  BarChart, Map as MapIcon, Settings
+  BarChart, Map as MapIcon, Settings, SquarePlus
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
